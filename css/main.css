@@ -872,14 +872,36 @@ ol {
 }
 
 /* portfolio */
-.filters {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+.portfolio img {
+  width: 100%;
+  height: auto;
 }
 
-.filters__item:not(:last-child) {
-  margin-right: 8px;
+.filters {
+  display: flex;
+  margin-right: -8px;
+  margin-top: -15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .filters {
+    margin-bottom: 0px;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1209px) {
+  .filters {
+    margin-bottom: 50px;
+  }
+}
+
+.filters__item {
+  margin-left: 8px;
+  margin-top: 15px;
 }
 
 .filters__btn {
@@ -905,14 +927,52 @@ ol {
 .projects {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
 }
 
-.projects__item {
-  flex-basis: calc((100% - 270px) / 9);
-  margin-left: 30px;
-  margin-top: 30px;
+@media screen and (min-width: 768px) {
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .projects__item {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-left: 30px;
+    margin-top: 30px;
+    background: #ffffff;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects__item {
+    flex-basis: calc((100% - 90px) / 3);
+    margin-left: 30px;
+    margin-top: 30px;
+    background: #ffffff;
+  }
+}
+
+.projects__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .projects__item:not(:last-child) {
+    margin-bottom: 0px;
+  }
 }
 
 .projects__link {
@@ -939,6 +999,7 @@ ol {
   padding: 63px 24px;
   letter-spacing: 0.03em;
   width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   overflow: auto;
@@ -958,6 +1019,7 @@ ol {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-color);
+  margin-bottom: 4px;
 }
 
 .projects__desc {
