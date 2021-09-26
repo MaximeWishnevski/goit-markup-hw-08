@@ -11,15 +11,21 @@
   visibility: hidden;
   pointer-events: none;
 
+  padding: 48px 25px;
+  max-width: 480px;
+
   &.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   &__container {
-    position: relative;
-    padding: 48px 25px;
-    max-width: 480px;
+    // position: relative;
+    // padding: 48px 25px;
+    // max-width: 480px;
   }
   &__close-btn {
     position: absolute;
@@ -34,7 +40,7 @@
   }
 
   &__nav {
-    margin-bottom: 302px;
+    // margin-bottom: 302px;
   }
   &__nav-item:not(:last-child) {
     padding-bottom: 32px;
@@ -51,7 +57,7 @@
     }
   }
   &__contacts {
-    margin-bottom: 64px;
+    // margin-bottom: 64px;
   }
   &__contacts-item:not(:last-child) {
     margin-bottom: 32px;

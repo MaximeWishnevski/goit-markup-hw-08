@@ -105,11 +105,18 @@ ol {
 
 .section-title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   color: var(--title-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .social-title {
@@ -1279,18 +1286,17 @@ ol {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  padding: 48px 25px;
+  max-width: 480px;
 }
 
 .mobile.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-}
-
-.mobile__container {
-  position: relative;
-  padding: 48px 25px;
-  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .mobile__close-btn {
@@ -1303,10 +1309,6 @@ ol {
   background-color: transparent;
   padding: 0;
   line-height: 0;
-}
-
-.mobile__nav {
-  margin-bottom: 302px;
 }
 
 .mobile__nav-item:not(:last-child) {
@@ -1323,10 +1325,6 @@ ol {
 
 .mobile__nav-link:hover, .mobile__nav-link:focus {
   color: var(--accent-color);
-}
-
-.mobile__contacts {
-  margin-bottom: 64px;
 }
 
 .mobile__contacts-item:not(:last-child) {
