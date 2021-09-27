@@ -1,13 +1,24 @@
 .modal-window {
   max-width: 450px;
-
   border-radius: 4px;
   background-color: var(--primary-background-color);
   position: absolute;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 40px;
+
+  @media screen and (min-width: 450px) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 528px;
+  }
 }
+
 .modal-close-btn {
   width: 30px;
   height: 30px;
@@ -36,17 +47,4 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
-@media screen and (min-width: 450px) {
-  .modal-window {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 450px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .modal-window {
-    min-width: 528px;
-  }
 }

@@ -985,6 +985,9 @@ ol {
 .projects__link {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .projects__link:hover, .projects__link:focus {
@@ -1039,6 +1042,7 @@ ol {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: 0;
+  flex-grow: 1;
 }
 
 .backdrop {
@@ -1059,6 +1063,21 @@ ol {
   position: absolute;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 40px;
+}
+
+@media screen and (min-width: 450px) {
+  .modal-window {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-window {
+    min-width: 528px;
+  }
 }
 
 .modal-close-btn {
@@ -1091,21 +1110,6 @@ ol {
   pointer-events: none;
 }
 
-@media screen and (min-width: 450px) {
-  .modal-window {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 450px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .modal-window {
-    min-width: 528px;
-  }
-}
-
 .form-top-text {
   font-family: 'Roboto';
   font-weight: 700;
@@ -1114,6 +1118,13 @@ ol {
   text-align: center;
   color: var(--title-color);
   margin-bottom: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-top-text {
+    line-height: 1.15;
+    max-width: unset;
+  }
 }
 
 .form-wrapper {
@@ -1162,7 +1173,7 @@ ol {
 }
 
 .form-input:focus + .form-icon {
-  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .form-about {
@@ -1195,6 +1206,12 @@ ol {
   font-size: 12px;
   line-height: 1.17;
   color: var(--text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .agree {
+    font-size: 14px;
+  }
 }
 
 .modal-form-policy-link {
@@ -1253,19 +1270,6 @@ ol {
 .form-button:hover, .form-button:focus {
   background-color: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-@media screen and (min-width: 1200px) {
-  .form-top-text {
-    line-height: 1.15;
-    max-width: unset;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .agree {
-    font-size: 14px;
-  }
 }
 
 @media screen and (max-width: 320px) {
